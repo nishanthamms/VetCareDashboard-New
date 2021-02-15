@@ -1,0 +1,39 @@
+.topic{
+  margin-top: 2%;
+  text-align: center;
+}
+.subtopic{
+ 
+  text-align: center;
+}
+.btnView{
+  margin-top: 2%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.notUser{
+    color: red;
+    margin-top: 10%;
+    text-align: center;
+}
+img{
+  margin-top:3%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.tbar{
+  background-color: #3EABE3;
+}
+#topic{
+  color: white;
+}

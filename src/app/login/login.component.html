@@ -1,0 +1,40 @@
+
+<mat-toolbar class="tbar">
+  <mat-toolbar-row>
+
+    <span class="topic">VETCARE DASHBOARD</span>
+
+    <!-- <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
+      <div fxLayout="row" fxLayoutGap="20px">
+          <span class="redirect" routerLink="/register-user"> Sign Up</span>
+      </div>
+    </div> -->
+  </mat-toolbar-row>
+  </mat-toolbar>
+
+<div  fxLayoutAlign="center center" fxFlexFill class="main-div bg">
+  <mat-card fxFlex="30">
+
+    <mat-toolbar class="radius"><span>User Login</span></mat-toolbar>
+
+
+     <form fxLayoutAlign="stretch" fxLayout="column" class="login-form">
+      <mat-form-field>
+        <mat-label>Username</mat-label>
+        <input type="email" matInput placeholder="Enter Email" #userName>
+      </mat-form-field>
+
+      <mat-form-field >
+        <mat-label>Password</mat-label>
+        <input matInput type="password" placeholder="Enter Password" #userPassword required>
+      </mat-form-field>
+
+      <button (click)="loginUser(userName.value, userPassword.value)" color="primary" mat-raised-button type="submit">Login</button>
+      <span routerLink="/forgot-password" class="fg-pwd">Forgot Password?</span>
+     </form>
+
+  </mat-card>
+</div>
+
+
+

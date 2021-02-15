@@ -1,0 +1,41 @@
+<div class="content">
+<h1><b>Farm Information</b></h1>
+<mat-card>
+    
+   <p class="example-label topic"> Farm Name:</p>  <p  class="example-row">{{farm.farmName}}</p><br>
+   <p class="example-label topic"> Farm Reg.No :</p> <p  class="example-row">{{farm.farmRegNo}}</p><br>
+   <p class="example-label topic">Ower Name : </p> <p  class="example-row">{{farm.ownerName}}</p><br>
+   <p class="example-label topic"> Veterinarian Division :</p> <p  class="example-row">{{farm.veterinarianDivision}}</p><br>
+   <p class="example-label topic">G.S Division :</p><p  class="example-row">{{farm.GSDivision}}</p><br>
+    <p class="example-label topic"> Address : </p><p  class="example-row">{{farm.address}}</p><br>
+    <p class="example-label topic">Contact Number : </p><p  class="example-row">{{farm.contactNo}}</p><br>
+    <p class="example-label topic">Cattle Count :</p> <p  class="example-row">{{farm.cattleCount}}</p><br>
+    <p class="example-label topic"> Dairy Cattle Count : </p><p  class="example-row">{{farm.dairyCattleCount}}</p><br>
+  
+</mat-card>
+
+<br>
+<mat-divider></mat-divider>
+<br>
+<h2>Cattle Information</h2>
+
+
+    <mat-form-field floatLabel="never" class="example-full-width">
+        <input matInput placeholder="Search"  [(ngModel)]="term" animated="true">
+    </mat-form-field>
+
+<div id="cattle" *ngFor="let cattle of (cattles | async | filter:term | paginate: { itemsPerPage: 5, currentPage: q })" (click)="gotomore(cattle.cattleTagId)">
+    <div *ngIf="fid== cattle.farmid">
+      <mat-card  [routerLink]="'/cattleinfo/' + cattle.id">     
+          <div class="example-label topic">{{ cattle.cattleTagId}}</div>
+             
+          <div class="example-row">{{ cattle.sex}}</div>
+        
+      </mat-card>
+      <br>  
+   </div>  
+</div> 
+    <pagination-controls (pageChange)="q = $event"></pagination-controls>
+ <br>
+ <br>
+ </div> 

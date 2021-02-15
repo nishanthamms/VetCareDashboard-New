@@ -1,0 +1,90 @@
+<div class="content">
+    <!-- Load an icon library -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+<br>
+
+<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px" class="stats-cards">
+  <mat-card fxFlex="50" class="bgcrd" >
+    <mat-card-content fxLayout="row"  fxLayoutGap="10px" >
+      <div class="test"><i class="fa fa-fw fa-home" id="icn"></i></div>
+      <div class="title">
+         <mat-card-title class="topic">Total Farms</mat-card-title>
+         <h1>{{farmCount}}</h1>
+      </div>
+    </mat-card-content>
+  </mat-card>
+ 
+  <mat-card fxFlex="50" class="bgcrd" >
+    <mat-card-content fxLayout="row"  fxLayoutGap="10px" >
+      <div class="test"><i class="fas fa-horse" id="icn"></i></div>
+      <div class="title">
+         <mat-card-title class="topic">Total Cattles</mat-card-title>
+         <h1>{{cattlecount}}</h1>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+
+
+<br>
+<mat-divider></mat-divider>
+<br>
+<div>
+  <app-widget-area></app-widget-area>
+</div>
+
+<br>
+<mat-divider></mat-divider>
+<br>
+
+
+
+<br>
+<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px">
+  <div fxFlex="100">
+    <div class="mat-elevation-z8">
+      <table mat-table [dataSource]="dataSource">
+
+        <!-- Position Column -->
+        <ng-container matColumnDef="position">
+          <th mat-header-cell *matHeaderCellDef> Registration No </th>
+          <td mat-cell *matCellDef="let farm">{{farm.farmRegNo}}</td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef>Farm Name </th>
+          <td mat-cell *matCellDef="let farm"> {{farm.farmName}} </td>
+        </ng-container>
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="weight">
+          <th mat-header-cell *matHeaderCellDef> Cattle count </th>
+          <td mat-cell *matCellDef="let farm"> {{farm.cattleCount}} </td>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="symbol">
+          <th mat-header-cell *matHeaderCellDef> Diary Cattle Count </th>
+          <td mat-cell *matCellDef="let farm"> {{farm.dairyCattleCount}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+
+      <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+    </div>
+  </div>
+
+  <!--div fxFlex="50">
+  <app-widget-pie></app-widget-pie>
+  </div-->
+
+</div>
+<br>
+<br>
+<br>
+</div>
+

@@ -1,0 +1,29 @@
+.content{
+  background-color: #F5F5F5;
+  width:auto;
+  height:100%;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-right: 10px;
+}
+.example-full-width {
+    width: 100%;
+  }
+  section {
+    display: table;
+  }
+  
+  .example-label {
+    display: table-cell;
+    font-size: 14px;
+    margin-left: 8px;
+    min-width: 160px;
+  }
+  
+  .example-row {
+    display: table-cell;
+    width: 490px;
+  }
+  .topic{
+    color:#5363BC;
+  }

@@ -1,0 +1,58 @@
+.content{
+  background-color: #F5F5F5;
+  width:auto;
+  height:100%;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+.example-full-width {
+    width: 100%;
+  }
+  section {
+    display: table;
+  }
+  
+  .example-label {
+    display: table-cell;
+    font-size: 14px;
+    margin-left: 8px;
+    min-width: 100px;
+  }
+  
+  .example-row {
+    display: table-cell;
+    width: 490px;
+  }
+  .topic{
+    color:#5363BC;
+  }
+  img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+ /* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+  height: 100px; /* Should be removed. Only for demonstration */
+}
+
+.left, .right {
+  width: 25%;
+}
+
+.middle {
+  width: 40%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}

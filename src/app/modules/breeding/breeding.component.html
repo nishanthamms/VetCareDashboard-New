@@ -1,0 +1,17 @@
+<div class="content">
+<h1><b>Breeding Information</b></h1>
+
+<div *ngFor="let breeding of (breedings | async)">
+  <mat-card *ngIf="ctid== breeding.cattleid">
+    <p class="example-label topic">Date of heat sign observed :</p>  <p  class="example-row"> {{ breeding.dateOfHeatObserved }}</p><br>
+    <p class="example-label topic">Date of first AI : </p>  <p  class="example-row"> {{ breeding.dateOfFirstAI }} </p><br>
+    <p class="example-label topic">Date of second AI : </p>  <p  class="example-row"> {{ breeding.dateOfSecondAI }}</p> <br>
+    <p class="example-label topic">Seman ID : </p>  <p  class="example-row"> {{ breeding.semanId }}</p><br>
+    <p class="example-label topic"> Date of PD :</p>  <p  class="example-row">  {{ breeding.dateOfPD }}</p><br>
+    <p class="example-label topic">Date of last calving: </p>  <p  class="example-row"> {{ breeding.dateOfLastCalving }}</p><br>
+    <p class="example-label topic"> Number of calving :</p>  <p  class="example-row">  {{ breeding.noOfCalving }}</p><br>
+    <p class="example-label topic"> AI receipt No: </p>  <p  class="example-row"> {{ breeding.AIReceiptNo }}</p><br>
+  </mat-card>
+  <br>
+</div>
+</div>

@@ -1,0 +1,37 @@
+<div class="content">
+<!--div class="txt">
+    <mat-card class="bgcrd">
+        <mat-card-title>Total Users</mat-card-title>
+        <h1>{{userCount}}</h1>
+    </mat-card>
+</div-->
+
+<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px" class="stats-cards">
+    <mat-card fxFlex="100" class="bgcrd" >
+      <mat-card-content fxLayout="row"  fxLayoutGap="10px" >
+        <div class="test"><i class="fa fa-fw fa-users" id="icn"></i></div>
+        <div class="title">
+           <mat-card-title class="topic">Total Users</mat-card-title>
+           <h1>{{userCount}}</h1>
+        </div>
+      </mat-card-content>
+    </mat-card> 
+</div>
+<br>
+<mat-divider></mat-divider>
+<br>
+<h2>User Account Settings</h2>
+<mat-card [routerLink]="['/adduser']" class="subCrd">
+    <a mat-list-item  >Add User</a>
+</mat-card>
+<br>
+<mat-card [routerLink]="['/update-user']" class="subCrd">
+    <a mat-list-item   >Update User</a>
+</mat-card>
+<br>
+<mat-card [routerLink]="['/remove-user']" class="subCrd">
+    <a mat-list-item   >Remove User</a>
+</mat-card>
+</div> 
+
+   

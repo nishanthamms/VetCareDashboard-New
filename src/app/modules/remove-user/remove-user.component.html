@@ -1,0 +1,30 @@
+<div class="content">
+<h1><b>Remove User</b></h1>
+
+<mat-form-field floatLabel="never" class="example-full-width">
+    <input matInput placeholder="Search"  [(ngModel)]="term" animated="true">
+</mat-form-field>
+
+<div *ngFor="let user of (users | async | filter:term | paginate: { itemsPerPage: 2, currentPage: q })">
+    <mat-card (click)="gotomore(farm.id)">
+      <div class="row">
+        <div class="column left" >
+            <img [src]= user?.userImg  class="center" alt="profile pic">
+        </div>
+        <div class="column middle" >
+            <p class="example-label topic" >Full Name</p>
+            <p class="example-row">{{ user.fullName }}</p><br>
+            <p class="example-label topic">Designation</p>
+            <p class="example-row">{{user.designation }}</p>
+        </div>
+        <div class="column right" >
+            <button mat-raised-button color="warn" (click)="confirmDialog(user.uid)" >Remove</button>
+        </div>
+      </div>
+    </mat-card>   
+    <br>
+</div>
+<pagination-controls (pageChange)="q = $event"></pagination-controls>
+   
+</div>
+

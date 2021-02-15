@@ -1,0 +1,32 @@
+<div class="content">
+<h1><b>Farms</b> </h1>
+
+<!--mat-form-field floatLabel="never" class="example-full-width">
+    <input matInput placeholder="Search"  [(ngModel)]="term" animated="true">
+</mat-form-field-->
+
+<br>
+
+  <!--div id="farmers" *ngFor="let farm of (farms | async | filter:term | paginate: { itemsPerPage: 3, currentPage: q })" >
+    <mat-card class="section" [routerLink]="'/farminfo/'+farm.id" (click)="gotomore(farm.id)">
+        <p class="example-label topic" >Farm Name</p>
+          <p class="example-row">{{ farm.farmName }}</p><br>
+          <p class="example-label topic">Registration Number</p>
+          <p class="example-row">{{ farm.farmRegNo }}</p>
+    </mat-card>
+    <br>
+  </div>
+
+  <pagination-controls (pageChange)="q = $event"></pagination-controls>
+</div-->
+
+<ag-grid-angular
+    style="width: 1000px; height: 500px;"
+    class="ag-theme-alpine"
+    [rowData]="rowData"
+    [columnDefs]="columnDefs"
+    (rowClicked)="rowClicked($event)"
+    [pagination]="true"
+   
+>
+</ag-grid-angular>

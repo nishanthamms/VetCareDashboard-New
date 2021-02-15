@@ -1,0 +1,37 @@
+.main-div mat-card{
+  padding: 0px;
+}
+
+mat-card{
+  border-radius: 20px;
+}
+.login-form{
+  padding: 20px;
+}
+
+.bg{
+  background-image: url("..\..\assets\image\bg4.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+mat-toolbar{
+  background-color: #00BCD4;
+
+}
+
+.radius{
+  border-radius: 15px 5px 15px 0px;
+}
+
+.redirect,.fg-pwd{
+  text-decoration: underline;
+}
+.tbar{
+  background-color: #3EABE3;
+}
+.topic{
+  color:white;
+}

@@ -1,0 +1,73 @@
+h1{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+h2{
+    text-align: center;
+    font-size: 25px;
+}
+p{
+    text-align: justify;
+    font-size: medium;
+    line-height: 30px;
+}
+
+.farmdata{
+    display: inline;
+    margin-inline-end: 20px;
+}
+
+mat-card-title{
+    font-size: large;
+}
+
+table,th,td {
+    border: 1px solid gray;
+    text-align: center;
+    width: 250px;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+.condition{
+    padding: 5px;
+    text-align: center;
+}
+
+.mat-elevation-z8{
+    margin-left: 25px;
+    margin-top: 5px;
+}
+
+section {
+    display: table;
+  }
+  
+.example-label {
+    border: 1px solid gray;
+    display: table-cell;
+    font-size: 14px;
+    width: 500px;
+    text-align:center;
+
+}
+.example-button-row {
+    border: 1px solid gray;
+    display: table-cell;
+    width: 500px;
+    text-align:center;
+}
+
+.example-card-count{
+    display: table-cell;
+    width: 500px;
+}
+  
+.example-button-row .mat-button-base {
+    margin: 8px 8px 8px 0;
+}
+
+.count-data{
+    display: inline;
+}

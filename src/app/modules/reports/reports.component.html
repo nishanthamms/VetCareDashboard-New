@@ -1,0 +1,103 @@
+<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px">
+  <div fxFlex="90"></div>
+  <div fxFlex="10" #content>
+    <button mat-raised-button color="primary">Download PDF</button>
+  </div>
+</div>
+
+<br><br>
+
+<div class="container" id="element-to-export">
+  <h1>Regional Cattle Farm Health & Reporting System</h1>
+  <h2>Summary Report</h2>
+
+  <br>
+
+  <p>The purpose of this report is to give a summary of cattle health in Badulla region. This report analyzed all the collected data 
+    from cattle farms to make wise decisions about how to maintain cattle health in a better way.</p>
+
+  <section>
+    <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="100px">
+      <div fxFlex="25"></div>
+      <div fxFlex="25">
+        <div class="example-label">
+          <mat-card>
+            <mat-card-title>Total Farms</mat-card-title>
+            <h1>{{farmCount}}</h1>
+          </mat-card>
+        </div>
+      </div>
+      <div fxFlex="25">
+        <div class="example-button-row">
+            <mat-card>
+              <mat-card-title>Total Cattles</mat-card-title>
+              <h1>{{cattleCount}}</h1>
+            </mat-card>
+        </div>
+      </div>
+      <div fxFlex="25"></div>
+    </div>
+  </section>
+  
+  <br>
+
+  <p>The number of cattle in each and every farms is as below.</p>
+          
+  <div id="farmers" *ngFor="let farm of (farms | async)" >
+    <mat-card>
+      <mat-card-title class="farmdata">Farm</mat-card-title>
+      <div class="farmdata">{{ farm.farmName }}</div>
+      <div class="farmdata">{{ farm.farmRegNo }}</div>
+  
+      <br><br><br>
+  
+      <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px">
+        <div feFlex="30">
+          <div class="mat-elevation-z8">
+            <table>
+              <tr>
+                <th>Details</th>
+                <th>Count</th>
+              </tr>
+              <tr>
+                <td>Female Cattle</td>
+                <td>{{femaleCattleCount}}</td>
+              </tr>
+              <tr>
+                <td>Male Cattle</td>
+                <td>{{maleCattleCount}}</td>
+              </tr>
+              <tr>
+                <td>Total Cattle</td>
+                <td>{{totalCattleCount}}</td>
+              </tr>
+              <tr>
+                <th>Cattle Condition</th>
+              </tr>
+              <tr>
+                <td>Sick Cattle</td>
+                <td>{{sickCattleCount}}</td>
+              </tr>
+              <tr>
+                <td>Pregnant Cattle</td>
+                <td>{{pregnantCattleCount}}</td>
+              </tr>
+              <tr>
+                <td>Vaccinate Cattle</td>
+                <td>{{vaccineCattleCount}}</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+  
+        <div fxFlex="70">
+          <p>(disease name) was spreading among cattle in {{farm.farmName}} fastly during (time range). Following chart indicates the 
+            way it spreads among cattle. (Vaccine name) gave to  every cattle and it caused to decrease the speed of spreading the disease.</p>
+          <app-widget-bar></app-widget-bar>
+        </div>
+      </div>
+    </mat-card>
+    <br>
+  </div> 
+</div>
+

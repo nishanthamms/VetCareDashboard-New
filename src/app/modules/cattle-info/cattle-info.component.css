@@ -1,0 +1,44 @@
+.content{
+  background-color: #F5F5F5;
+  width:auto;
+  height:auto;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+  
+  .example-button-row {
+    display: table-cell;
+    width: 800px;
+  }
+  
+  .example-button-row .mat-button-base {
+    margin: 8px 8px 8px ;
+    width:100%;
+  }
+  
+  .example-label {
+    display: table-cell;
+    font-size: 14px;
+    margin-left: 8px;
+    min-width: 180px;
+  }
+  
+  .example-row {
+    display: table-cell;
+    width: 490px;
+  }
+  .topic{
+    color:#5363BC;
+  }
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.btn{
+  width:99%;
+  margin:8px 8px 8px;
+}

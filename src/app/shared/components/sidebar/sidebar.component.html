@@ -1,0 +1,47 @@
+<div class="content">
+  <!-- Load an icon library -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+<mat-nav-list>
+  <div class="profile-card">
+    <div class="header">
+    <!--img src="https://www.pngitem.com/pimgs/m/508-5087240_clip-art-my-profile-icon-clipart-circle-hd.png" alt="profile_photo"-->
+    <img [src]= userProfile?.userImg  class="imgUser">
+    <!--div class="row" *ngIf="authenticationService.userData as user">
+    <!--div class="row">
+      <h2>User ID: <strong>{{user.email}}</strong></h2>
+  </div-->
+     <h2 class="txt">{{userProfile?.fullName}}</h2>
+  </div>
+  
+<mat-divider></mat-divider>
+
+  <!--h2 matSubheader class="txt">Pages</h2-->
+  <div [hidden]=isAdminHidden>
+    <a mat-list-item  routerLinkActive="list-item-active" [routerLink]="['/dashboard']" class="txt"><i class="fa  fa-fw fa-tachometer-alt" id="icn"></i>Dashboard</a>
+  </div>
+  <div [hidden]=isAdminHidden>
+    <a mat-list-item  routerLinkActive="list-item-active" [routerLink]="['/farms']" class="txt"><i class="fa fa-fw fa-home" id="icn"></i>Farms</a>
+  </div>
+  <div [hidden]=isAdminHidden>
+    <a mat-list-item  routerLinkActive="list-item-active" [routerLink]="['/farm-report']" class="txt"><i class="fa fa-fw fa-file" id="icn"></i>Report</a>
+  </div> 
+  <div [hidden]=isDirectorHidden>
+    <a mat-list-item routerLinkActive="list-item-active" [routerLink]="['/admin-dashboard']" class="txt"><i class="fa  fa-fw fa-tachometer-alt" id="icn"></i>Admin Dashboard</a>
+  </div>
+  <div>
+    <a mat-list-item  routerLinkActive="list-item-active" [routerLink]="['/change-password']" class="txt"><i class="fa fa-fw fa-wrench" id="icn"></i>Change Password</a>
+  </div>
+ <div>
+    <a mat-list-item  routerLinkActive="list-item-active" [routerLink]="['/update-profile']" class="txt"><i class="fa fa-fw fa-user" id="icn"></i>Update Profile</a>
+ </div>
+ 
+
+
+<!--mat-divider></mat-divider>
+<h2 matSubheader>User Account Settings</h2>
+<a mat-list-item  routerLinkActive="list-item-active" [routerLink]="['/adduser']">Add User</a>
+<a mat-list-item  routerLinkActive="list-item-active" [routerLink]="['/update-user']">Update User</a>
+<a mat-list-item  routerLinkActive="list-item-active" [routerLink]="['/remove-user']">Remove User</a-->
+</div>
+</mat-nav-list>
+</div>

@@ -1,0 +1,74 @@
+<div class="content">
+<div class="example-label"></div>
+  <div class="example-button-row">
+    <button mat-raised-button color="primary" (click)="generatePDF()">Generate PDF</button>
+</div>
+
+<div id="contentToConvert">
+    <h1 id="topic"><b>Farm Report</b></h1>
+    <p>Date: {{date}}</p>
+    <h2>Farm List</h2>
+   <table id="customers" border="1" width="100%">
+  
+        <tbody>
+          <tr>
+            <th>Reg. NO</th>
+            <th>Farm Name</th>
+            <th>Cattle Count</th>
+            <th>Diary Cattle Count</th>
+            <th>Address</th>
+            <th>Owner Name</th>
+            <th>Contact No</th>
+            <th>GS Division</th>
+            <th>Veterian Division</th>
+          </tr>
+          <tr *ngFor="let farm of (farms | async)" >
+            <td>{{ farm.farmRegNo }}</td>
+            <td>{{ farm.farmName }}</td>
+            <td>{{ farm.cattleCount }}</td>
+            <td>{{ farm.dairyCattleCount }}</td>
+            <td>{{ farm.address }}</td>
+            <td>{{ farm.ownerName }}</td>
+            <td>{{ farm.contactNo }}</td>
+            <td>{{ farm.GSDivision }}</td>
+            <td>{{ farm.veterinarianDivision }}</td>
+            
+          </tr>
+         
+        </tbody>
+    </table>
+    <br>
+    <h2>Cattle List</h2>
+    <table id="customers" border="1" width="100%">
+  
+      <tbody>
+        <tr>
+          <th>Tag Id</th>
+          <th>Farm Reg.NO</th>
+          <th>Sex</th>
+          <th>DOB</th>
+          <th>Weaning Weight</th>
+          <th>Breed</th>
+          <th>No Of Lactation</th>
+          <th>Speacial Features</th>
+          <th>Last Calving Date</th>
+        </tr>
+        <tr *ngFor="let cattle of (cattles | async)">
+          <!--span *ngFor="let farm of (farms | async )"-->
+            <!--span *ngIf="cattle.farmid===farm.farmRegNo"-->        
+              <td>{{ cattle.cattleTagId }}</td>            
+              <td>{{ cattle.farmid }}</td>
+              <td>{{ cattle.sex }}</td>
+              <td>{{ cattle.cattleDOB }}</td>
+              <td>{{ cattle.cattleWeaningWeg }}</td>
+              <td>{{ cattle.cattleBreed }}</td>         
+              <td>{{ cattle.noLactation }}</td>
+              <td>{{ cattle.specialFeature}}</td>
+              <td>{{ cattle.lastCalvingDate}}</td>
+            <!--/span-->         
+          <!--/span-->       
+        </tr>
+      </tbody>
+    </table>   
+</div>
+</div>

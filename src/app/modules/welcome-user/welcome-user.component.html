@@ -1,0 +1,28 @@
+
+<mat-toolbar class="tbar">
+    <mat-toolbar-row>
+  
+      <span id="topic">VETCARE DASHBOARD</span>
+  
+      <!-- <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
+        <div fxLayout="row" fxLayoutGap="20px">
+            <span class="redirect" routerLink="/register-user"> Sign Up</span>
+        </div>
+      </div> -->
+    </mat-toolbar-row>
+</mat-toolbar>
+<br>
+<div [hidden]=isImgHidden>
+  <img [src]= userProfile?.userImg  class="center" >
+</div>
+<h1 class="topic" [hidden]=isButtonHidden>Welcome {{name}}</h1><br>
+ <h2 class="subtopic" [hidden]=isButtonHidden>({{designation}})</h2>
+<div [hidden]=isButtonHidden>
+ <button mat-raised-button color="primary"   class="btnView" (click)="viewDashboard()">Go Here</button>
+</div>
+
+<h1 class="notUser" [hidden]= isUserHidden> You are not allowed to see the content.</h1>
+
+<div [hidden]= isUserHidden>
+    <button mat-raised-button color="warn"   class="btnView" (click)="goBack()">Go Back</button>
+</div>

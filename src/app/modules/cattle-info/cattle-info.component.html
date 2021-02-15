@@ -1,0 +1,32 @@
+<div class="content">
+<h1><b>Cattle Information</b></h1>
+<mat-card>
+  <p class="example-label topic"> Breed of cattle : </p>  <p  class="example-row">{{ cattle.cattleBreed }}</p><br>
+  <p class="example-label topic">  Cattle ID :</p>  <p  class="example-row">{{ cattle.cattleTagId }}</p><br>
+  <p class="example-label topic">   Cattle Date of Birth :</p>  <p  class="example-row">{{ cattle.cattleDOB }}</p><br>
+  <p class="example-label topic"> Special Features :</p>  <p  class="example-row">{{ cattle.specialFeature }}</p><br>
+  <p class="example-label topic"> Sex :</p>  <p  class="example-row">{{ cattle.sex}}</p><br>
+  <p class="example-label topic">No of lactation :</p>  <p  class="example-row"> {{ cattle.noLactation}}</p><br>
+  <p class="example-label topic"> Birth weight (Kg):</p>  <p  class="example-row">{{ cattle.birthWeg }}</p><br>
+  <p class="example-label topic"> Breeding weight (Kg) :</p>  <p  class="example-row">{{ cattle.breedingWeg}}</p><br>
+  <p class="example-label topic"> Weaning weight : </p>  <p  class="example-row">{{ cattle.cattleWeaningWeg}}</p><br>
+  <p class="example-label topic"> Avg. Pre weg.G/rate :</p>  <p  class="example-row">{{ cattle.avgPreWeg}}</p><br>
+  <p class="example-label topic"> Avg. Post weg.G/rate : </p>  <p  class="example-row">{{ cattle.avgPostWeg}}</p><br>
+  <p class="example-label topic"> Last calving date :</p>  <p  class="example-row">{{ cattle.lastCalvingDate}}</p><br>
+  <p class="example-label topic"> Cattle Image :</p><br>
+    <img width="50%" height="50%" [src]="cattle.cattleImg" /> 
+    <br>           
+    <a [href]="cattle.cattleImg" target="_blank" rel="noopener">Download</a>    
+</mat-card>
+<mat-divider></mat-divider>
+
+    <button mat-raised-button color="primary" class="btn" (click)="vaccine()">Vaccine Information</button><br>
+    <button mat-raised-button color="primary"  class="btn"(click)=" disease()">Diseases Informaion</button><br>
+    <button mat-raised-button color="primary"  class="btn" (click)=" breeding()">Breeding Informaion</button><br>
+  
+
+<mat-divider></mat-divider>
+<br>
+<br>
+<br>
+</div>

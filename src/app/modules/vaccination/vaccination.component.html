@@ -1,0 +1,15 @@
+<div class="content">
+<h1><b>Vaccination Information</b></h1>
+
+<div *ngFor="let vaccine of (vaccines | async)">
+    <mat-card *ngIf="ctid== vaccine.cattleid">
+        <p class="example-label topic"> Date : </p>  <p  class="example-row"> {{vaccine.date}} </p> <br>
+        <p class="example-label topic"> Name of vaccine :</p>  <p  class="example-row">{{vaccine.nameOfVaccine}}</p>  <br>
+        <p class="example-label topic"> Purpose of Vaccine :</p>  <p  class="example-row">{{vaccine.purposeOfVaccine}}</p> <br>
+        <p class="example-label topic"> Next vacciantion date:</p>  <p  class="example-row"> {{vaccine.nextVaccineDate}}</p> <br>
+        <p class="example-label topic">  Reason of Next Vaccination :</p>  <p  class="example-row">{{vaccine.reasonOfNextVaccine}}</p> <br>
+        <p class="example-label topic">  Remarks : </p>  <p  class="example-row">{{vaccine.remarks}}</p> <br>
+    </mat-card>
+    <br>
+</div>
+</div>
