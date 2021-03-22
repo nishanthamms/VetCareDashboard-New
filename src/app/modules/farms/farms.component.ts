@@ -26,12 +26,13 @@ export class FarmsComponent implements OnInit {
   constructor(private afs: AngularFirestore,private farmService: FarmService, private router: Router, private storage: SessionStorageService) { }
 
   columnDefs = [
-    { field: 'farmName', sortable: true, filter: true },
-    { field: 'farmRegNo', sortable: true, filter: true },
-    { field: 'ownerName', sortable: true, filter: true },
-    { field: 'GSDivision', sortable: true, filter: true },
-    { field: 'veterinarianDivision', sortable: true, filter: true },
+    { field: 'farmName', sortable: true, filter: true , resizable: true},
+    { field: 'farmRegNo', sortable: true, filter: true, resizable: true },
+    { field: 'ownerName', sortable: true, filter: true , resizable: true},
+    { field: 'GSDivision', sortable: true, filter: true, resizable: true  },
+    { field: 'veterinarianDivision', sortable: true, filter: true, resizable: true },
 ];
+
   ngOnInit(): void {
     this.farms = this.farmService.getFarms();
     this.designation = this.storage.retrieve('designation');

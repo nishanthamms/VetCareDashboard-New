@@ -16,17 +16,17 @@
     </mat-card>
     <br>
   </div>
-
+ //style="width: 1000px; height: 500px;"
   <pagination-controls (pageChange)="q = $event"></pagination-controls>
 </div-->
 
 <ag-grid-angular
-    style="width: 1000px; height: 500px;"
+    style="width: 100%; height: 500px;" 
     class="ag-theme-alpine"
     [rowData]="rowData"
     [columnDefs]="columnDefs"
     (rowClicked)="rowClicked($event)"
     [pagination]="true"
-   
+  
 >
 </ag-grid-angular>

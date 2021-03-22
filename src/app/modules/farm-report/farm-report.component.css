@@ -1,7 +1,7 @@
 .content{
   background-color: #F5F5F5;
   width:auto;
-  height:auto;
+  height:150%;
   padding-left: 10px;
   padding-top: 10px;
   padding-right: 10px;
@@ -11,6 +11,7 @@
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 100%;
+
 }
 
 #customers td, #customers th {
