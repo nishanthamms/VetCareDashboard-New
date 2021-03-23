@@ -24,7 +24,7 @@
         <input matInput placeholder="Search"  [(ngModel)]="term" animated="true">
     </mat-form-field>
 
-<div id="cattle" *ngFor="let cattle of (cattles | async | filter:term | paginate: { itemsPerPage: 5, currentPage: q })" (click)="gotomore(cattle.cattleTagId)">
+<div id="cattle" *ngFor="let cattle of (cattles | async | filter:term | paginate: { itemsPerPage: 10, currentPage: q })" (click)="gotomore(cattle.cattleTagId)">
     <div *ngIf="fid== cattle.farmid">
       <mat-card  [routerLink]="'/cattleinfo/' + cattle.id">     
           <div class="example-label topic">{{ cattle.cattleTagId}}</div>
