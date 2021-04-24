@@ -2,7 +2,7 @@
   background-color: #F5F5F5;
   width:auto;
   height:auto;
-  padding-left: 10px;
+  padding-left: 20px;
   padding-top: 10px;
   padding-right: 10px;
  
@@ -19,15 +19,15 @@
   padding: 8px;
 }
 
-#customers tr:nth-child(even){background-color: #f2f2f2;}
+#customers tr:nth-child(even){background-color: #c6ebc1;}
 
-#customers tr:hover {background-color: #ddd;}
+#customers tr:hover {background-color: rgb(229, 252, 253);}
 
 #customers th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #9A9DA4;
+  background-color: #27692b;
   color: white;
 }
 .example-label {
